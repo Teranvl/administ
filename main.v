@@ -15,16 +15,16 @@ module main
 );
 
 
-		test test (
-		.clock    	  (clock),
-		.reset 	     (reset),
+		 test test (
+		.clock        (clock),
+		.reset 	      (reset),
 		.write_opcode (op),   
-		.data			  (data),
-		.result		  (result),
-		.result1		  (result1),
-		.result2		  (result2),
-		.result3		  (result3),
-		.result4		  (result4)
+		.data	      (data),
+		.result	      (result),
+		.result1      (result1),
+		.result2      (result2),
+		.result3      (result3),
+		.result4      (result4)
 		
 		);
 		
@@ -40,9 +40,9 @@ module main
     );
 	 
 	 reg         stack_push;
-    reg         stack_pop;
+    	 reg         stack_pop;
 	 reg  [3:0]  stack_write_data;
-    wire [3:0]  stack_read_data;
+   	 wire [3:0]  stack_read_data;
 	 reg 	[3:0]  op;
 
 
@@ -50,7 +50,7 @@ module main
 	 always @(*)
 	 begin
 		  stack_push       = 0;
-        stack_pop        = 0;
+         	  stack_pop        = 0;
 		  op=0;
 	 
 	 if(CALLproc)
